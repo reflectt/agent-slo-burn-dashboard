@@ -1,0 +1,4 @@
+{"ts":"2026-02-05T19:30:00.000Z","type":"degraded","severity":"warn","message":"minor degradation"}
+{"ts":"2026-02-05T14:00:00.000Z","type":"stuck","severity":"error","sessionId":"s-old","message":"agent stuck"}
+{"ts":"2026-02-05T20:30:00.000Z","type":"stuck","severity":"error","sessionId":"s7","message":"no progress"}
+not-json

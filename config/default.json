@@ -1,0 +1,29 @@
+{
+  "paths": {
+    "workdir": ".",
+    "rawDir": "var/raw",
+    "rollupsDir": "var/rollups",
+    "reportsDir": "var/reports",
+
+    "alertsLedger": "../agent-run-health-alerting/var/alerts/alerts-ledger.jsonl",
+    "alertsLedgerFallback": "var/alerts-ledger.jsonl",
+
+    "canaryHistory": "../scheduled-canary-runs/var/canary-history.jsonl",
+    "canaryHistoryFallback": "var/canary-history.jsonl"
+  },
+  "windows": {
+    "short": "1h",
+    "long": "6h",
+    "report": ["1h", "6h", "24h"]
+  },
+  "collection": {
+    "sessionsActiveMinutes": 1440
+  },
+  "slos": {
+    "session_success": { "target": 0.99 },
+    "stuck_alert_rate": { "targetMax": 0.005 },
+    "canary_pass": { "target": 0.98 }
+  },
+  "burn": { "warn": 1, "alertShort": 2, "alertLong": 1 },
+  "display": { "lowN": 20 }
+}

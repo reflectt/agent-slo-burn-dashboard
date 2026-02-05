@@ -1,0 +1,18 @@
+{
+  "name": "agent-slo-burn-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "agent-slo": "./bin/agent-slo"
+  },
+  "scripts": {
+    "refresh": "node ./src/cli.mjs refresh",
+    "show": "node ./src/cli.mjs show",
+    "selftest": "node ./scripts/selftest.mjs",
+    "fmt": "node ./scripts/fmt-check.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
