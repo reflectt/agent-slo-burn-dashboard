@@ -1,0 +1,29 @@
+name: CI Canary (PR)
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  canary:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run canary + gate PR
+        uses: reflectt/ci-canary-pr-gate@main
+        with:
+          command: node ./scripts/ci-canary-dummy.js
+          report_path: eval-report.json
+          baseline_path: eval-baseline.json
+          min_score: "0.99"
+          max_score_drop: "0.00"
+          comment_mode: create-or-update

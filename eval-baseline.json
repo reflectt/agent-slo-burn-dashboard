@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "summary": {
+    "score": 1.0,
+    "passed": true,
+    "note": "Deterministic baseline for ci-canary-pr-gate dogfooding"
+  },
+  "scenarios": [
+    { "id": "dummy/always-pass", "passed": true, "score": 1.0 },
+    { "id": "dummy/format-check", "passed": true, "score": 1.0 }
+  ]
+}
